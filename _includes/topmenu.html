@@ -1,0 +1,22 @@
+<nav class="topnav" id="topnav">
+        {% assign pages = site.pages | sort: "weight"  %}      	
+         {% for pg in pages %}{% if pg.title %}{% unless pg.hide %}
+	 <a {% if pg.url == page.url %} class = "active" ,{% endif %} href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+	 {% endunless %}{% endif %}
+    {% endfor %}
+  <a href="javascript:void(0);" class="menubutton" onclick="myFunction()">
+    menu
+  </a>
+</nav>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("topnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
