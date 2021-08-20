@@ -16,7 +16,7 @@ weight: 2
 
 <div class="flex-container"> 
 <div class="flex-item" style="flex:35%"> 
-<img src="{{site.baseurl}}{{atom.img}}" alt = "image of {{atom.name}}" style="width:90px;height:122px;">
+<img src="{{site.baseurl}}/{{atom.img}}" alt = "image of {{atom.name}}" style="width:90px;height:122px;">
 </div>
 <div class="flex-item" style="flex:55%"> 
 <strong> {{ atom.name }} </strong>
