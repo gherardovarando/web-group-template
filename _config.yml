@@ -9,4 +9,16 @@ collections:
   news:
     output: true
   people:
-    output: false
+    output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "people" # a collection in your site, in plural form
+    values:
+      layout: "default"
+
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

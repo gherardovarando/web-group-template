@@ -19,9 +19,17 @@ weight: 2
 <img src="{{site.baseurl}}/{{atom.img}}" alt = "image of {{atom.name}}" style="height:122px;">
 </div>
 <div class="flex-item" style="flex:55%"> 
-<strong> {{ atom.name }} </strong>
+<strong> 
+{% if atom.link %}
+<a href="{{atom.link}}"> {{atom.name}} </a> 
+{% else if atom.published %}
+<a href="{{atom.url}}"> {{atom.name}} </a>
+{% else %}
+{{atom.name}}
+{% endif %}
+</strong>
 
-<p> {{ atom.content }} </p> 
+<p> {{ atom.excerpt }} </p> 
 </div>
 </div>
 

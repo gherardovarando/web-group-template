@@ -7,5 +7,4 @@ hide: false
 
 ## Publications 
 
-
-
+{% include biblio.html %}

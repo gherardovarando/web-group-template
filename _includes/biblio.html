@@ -1,0 +1,119 @@
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
+
+{% if include.bibfiles %}
+{% assign bibfiles = include.bibfiles %}
+{% else %}
+{% assign bibfiles = site.data.publications %}
+{% endif %}
+
+{% for bibtex in bibfiles %} 
+<bibtex src="{{site.baseurl}}/bibtex/{{bibtex}}"></bibtex>
+{% endfor %}
+
+
+
+<div class="bibtex_template" style="display:none; padding: 0.8em;">
+ <li style="padding: 0.2em;">
+   <span>
+  <span class="bibtextypekey" style="display:none;"></span>
+  <span class="if title" style="font-weight: bold;">
+ <span class="title"></span><br>
+  </span>
+  <span class="author"></span><br>
+  <span class="if booktitle" style="font-style: italic;">
+    <span class="booktitle"></span>,
+    <span class="if address" style="font-style: normal;">
+      <span class="address"></span>
+    </span>
+  </span>
+  <span class="if journal" style="font-style: italic;">
+    <span class="journal"></span>
+  </span>
+  <span class="if publisher">
+    <span class="publisher"></span>
+  </span>
+  <span class="if school">
+    <span class="school"></span>
+  </span>
+  <span class="if volume">
+    <span class="volume"></span>
+    <span class="if number">(<span class="number"></span>)</span>
+    <span class="if pages">:<span class="pages"></span>,
+    </span>
+  </span>
+  <span class="if edition">
+    <span class="edition"></span> ed.,
+  </span><span class="year"></span>
+   </span>
+   <br>
+   <span class="if url">
+     <a class="url">
+       <button type="button"> URL </button>
+     </a>
+   </span>
+   <span class="if arxiv">
+     <a class="arxiv">
+       <button type="button"> arXiv </button>
+     </a>
+   </span>
+   <span class="if pdf">
+     <a class="pdf">
+       <button type="button"> PDF </button>
+     </a>
+   </span>
+   <span class="if doi">
+     <a class="doi">
+       <button type="button" class="btn btn-sm btn-warning" aria-label="Left Align"> DOI </button>
+     </a>
+   </span>
+ <span class="if code">
+   <button type="button" class="btn btn-sm btn-danger" aria-label="Left Align">
+     <a class="code"> Code </a>
+   </button>
+ </span>
+ <span class="if project">
+   <button type="button" class="btn btn-sm btn-warning" aria-label="Left Align">
+     <a class="code"> Project </a>
+   </button>
+ </span>
+   <span class="if bibtex">
+     <button type="button">bibtex</button>
+   </span>
+   <br>
+   <span>
+     <div class="bibtexdata alert alert-success collapse closed" role="alert">
+       <span class="bibtex"></span>
+     </div>
+   </span>
+ </li>
+</div> <!-- bibtex_template -->
+
+
+<div class="bibtex_structure">
+  <div class="group year" extra="DESC number">
+    <h2 class="title"></h2>
+    <div class="templates"></div>
+  </div>
+</div>
+
+<select class="bibtex_search"
+            search="bibtextypekey">
+   <option value="">Select type</option>
+   <option value="ARTICLE">journal</option>
+   <option value="INPROCEEDINGS">conference, workshop</option>
+   <option value="PHDTHESIS"> phd thesis</option>
+   <option value="MASTERTHESIS"> master thesis</option>
+   <option value="TECHREPORT"> tech reports</option>
+   <option value="BOOK"> books</option>
+   <option value="MANUAL"> manuals</option>
+   <option value="MISC">  slides, notes</option>
+   <option value="UNPUBLISHED">  draft, in preparation </option>
+</select>
+<select class="bibtex_search bibtex_generate_author" search="author">
+  <option value="">All Authors</option>
+</select>
+<input type="text" class="bibtex_search" id="searchbar" placeholder="Search publications">
+
+<ol reversed>
+   <div id="bibtex_display" author="{{include.author}}"></div>
+</ol>

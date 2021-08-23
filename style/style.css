@@ -37,6 +37,7 @@ article {
 .flex-item {
 	flex: 45%;
 	padding: 10px;
+        max-width: 50%;
 }
 
 .bib li {
