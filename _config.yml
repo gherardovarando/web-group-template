@@ -1,3 +1,12 @@
 title: The Best Research Group
 description: Webpage of the best research group
 author: Someone 
+timezone: Europe/Madrid
+future: true
+collections:
+  talks:
+    output: true
+  news:
+    output: true
+  people:
+    output: false

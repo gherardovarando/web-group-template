@@ -63,6 +63,21 @@ div.title {
 }
 
 
+.talks  th, td { 
+  padding: 15px;
+  text-align: left;
+  max-width: 20%;
+}
+
+.talks tr.title {
+  background-color: #f2dede;
+  color: black;
+}
+
+
+.talks tr.past {
+  background-color: #dbbc67;
+}
 
 @media (prefers-color-scheme: dark) {
   body {

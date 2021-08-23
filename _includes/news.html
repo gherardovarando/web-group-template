@@ -1,6 +1,6 @@
-<h4> news </h4>
-<div class = "news">
-	{% for post in site.posts %}
+<div class = "news"> 
+        {% assign selected = site.news %}
+	{% for post in selected %}
 	<div class = "news-item">
 		<a href="{{ post.url }}">{{ post.title }}</a>
 		<div>

@@ -7,23 +7,3 @@ roles:
    title: PostDoc
  - id: phd
    title: Phd student 
-people: 
-- name: Smith Charles 
-  bio: Full professor with lots of experience
-  img: img/smith.jpeg
-  role: full
-- name: Juliet Star
-  bio: Full professor with even more experience than Smith
-  img: img/juliet.png
-  role: full
-- name: A phd student
-  bio: A short bio of a phd student
-  role: phd 
-- name: A post doc
-  bio: bio of a postdoc
-  role: postdoc
-- name: an associate prof
-  bio: bio of an associate prof
-  role: associate
-- name: name name
-  bio: this is a bio
