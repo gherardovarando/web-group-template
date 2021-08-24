@@ -1,0 +1,29 @@
+<table class = "talks"> 
+  <tr class = "title">
+    <th>Date</th>
+    <th>Location</th>
+    <th>Title</th>
+    <th>Speaker</th>
+    <th>Affiliation</th>
+  </tr>
+        {% assign sorted = site.talks | reverse %}
+	{% for post in sorted %}
+        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %} 
+	<tr {% if posttime < nowunix %} class = "past" {% endif %}>
+           <th> {% if post.date %}<time datetime="{{ post.date }}">{{ post.date | date: "%A, %-d %B %Y %H:%M  (%Z | UTC%z)" }}</time>  {% endif %}</th>
+           <th> {% if post.link %}  
+                   <a href="{{ post.link }}"> {{ post.location }} </a> 
+                {% else %} {{ post.location }} {% endif %} </th>
+           <th>
+		<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </th>
+           <th> {{ post.speaker }} </th>
+           <th> {{ post.affiliation }} </th>
+	</tr>
+	{% endfor %}
+</table>
+
+
+
+

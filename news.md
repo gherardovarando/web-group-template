@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: news
 title: news
 weight: 6
 ---
 
 ## News
-{% include news.html %}
