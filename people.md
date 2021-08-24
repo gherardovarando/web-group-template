@@ -7,7 +7,7 @@ weight: 2
 
 
 
-{% for role in site.data.people.roles %} 
+{% for role in site.roles %} 
 {% assign people = site.people | where: 'role', role.id %}
 <h2> {{ role.title }}s </h2>
 <div class="flex-container">

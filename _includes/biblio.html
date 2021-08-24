@@ -3,11 +3,11 @@
 {% if include.bibfiles %}
 {% assign bibfiles = include.bibfiles %}
 {% else %}
-{% assign bibfiles = site.data.publications %}
+{% assign bibfiles = site.bibfiles %}
 {% endif %}
 
-{% for bibtex in bibfiles %} 
-<bibtex src="{{site.baseurl}}/bibtex/{{bibtex}}"></bibtex>
+{% for bib in bibfiles %} 
+<bibtex src="{{site.baseurl}}/{{bib}}"></bibtex>
 {% endfor %}
 
 

@@ -1,9 +1,0 @@
-roles: 
- - id: full
-   title: Full professor
- - id: associate
-   title: Associate professor  
- - id: postdoc
-   title: PostDoc
- - id: phd
-   title: Phd student 
