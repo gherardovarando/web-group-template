@@ -1,6 +1,6 @@
 ---
 layout: front
-title: Home 
+title: AwRG 
 weight: 1
 ---
 

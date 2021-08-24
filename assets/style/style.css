@@ -103,8 +103,8 @@ div.title {
 	top: 0;
 	margin: 0;
 	padding: 0;
-        padding-left: 160px;
         padding-right: 160px;
+        padding-left: 160px;
 	width: 100%;
 	background-color: #2d2d2d;
 	overflow: hidden;
@@ -133,6 +133,12 @@ div.title {
 .topnav a.active {
   background-color: #729FCF;
   color: black;
+}
+
+.topnav div.links {
+  float: right;
+  padding-left:160px;
+  padding-right:160px;
 }
 
 .topnav a.link {

@@ -4,6 +4,7 @@
 	 <a {% if pg.url == page.url %} class = "active" ,{% endif %} href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
 	 {% endunless %}{% endif %}
     {% endfor %}
+
   <a href="javascript:void(0);" class="menubutton" onclick="myFunction()">
     menu
   </a>
