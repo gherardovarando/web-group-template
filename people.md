@@ -23,7 +23,7 @@ weight: 2
 {% if atom.link %}
 <a href="{{atom.link}}"> {{atom.name}} </a> 
 {% else if atom.published %}
-<a href="{{atom.url}}"> {{atom.name}} </a>
+<a href="{{atom.url | relative_url }}"> {{atom.name}} </a>
 {% else %}
 {{atom.name}}
 {% endif %}
