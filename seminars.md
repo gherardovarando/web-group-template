@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                    <a href="{{ post.link }}"> {{ post.location }} </a> 
                 {% else %} {{ post.location }} {% endif %} </th>
            <th>
-		<a href="{{ post.url | realtive_url }}">{{ post.title }}</a>
+		<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </th>
            <th> {{ post.speaker }} </th>
            <th> {{ post.affiliation }} </th>
