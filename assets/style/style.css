@@ -191,6 +191,8 @@ div.title {
 		text-align: left;
 	}
 	.topnav.responsive div.plinks {
+		padding-left: 0px;
+		padding-right: 0px;
 		display: flex;
 		flex-wrap: wrap;
 	}
