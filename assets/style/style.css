@@ -175,12 +175,10 @@ div.title {
 		float: right;
 		display: block;
 	}
-	.topnav div.links {
+	.topnav div.plinks {
 		display: none;
 	}
-}
 
-@media screen and (max-width: 600px) {
 	.topnav.responsive {position: fixed;}
 	.topnav.responsive .menubutton {
 		position: absolute;
@@ -192,11 +190,11 @@ div.title {
 		display: block;
 		text-align: left;
 	}
-	.topnav.responsive div.links {
+	.topnav.responsive div.plinks {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.topnav.responsive a.link {
+	.topnav.responsive a.plink {
 		text-align: left;
 		float: none;
 	}
