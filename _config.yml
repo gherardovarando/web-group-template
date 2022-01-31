@@ -97,3 +97,7 @@ roles:
       title: PostDoc
     - id: phd
       title: Phd student 
+
+links: 
+   - name: twitter 
+     url: https://twitter.com/jekyllrb

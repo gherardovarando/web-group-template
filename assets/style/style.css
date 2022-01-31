@@ -122,10 +122,6 @@ div.title {
   font-size: 17px;
 }
 
-.topnav  a.plink {
- float: right
-}
-
 
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -139,18 +135,18 @@ div.title {
   color: black;
 }
 
-.topnav div.links {
+.topnav div.plinks {
   float: right;
   padding-left:160px;
   padding-right:160px;
 }
 
-.topnav a.link {
+.topnav a.plink {
 	float: right;
         font-size: 14px;
 }
 
-.topnav a.link:hover {
+.topnav a.plink:hover {
 	background-color: #2E3436;
 	color: white;
 }

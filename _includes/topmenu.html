@@ -4,9 +4,12 @@
 	 <a {% if pg.url == page.url %} class = "active" ,{% endif %} href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
 	 {% endunless %}{% endif %}
     {% endfor %}
+
+    <div class="plinks">
       {% for link in site.links %}
-    <a class = "plink", href = "{{ link.link }}">{{ link.name }}</a> 
+    <a class = "plink" href = "{{ link.url }}">{{ link.name }}</a> 
     {% endfor %}
+    </div>
   <a href="javascript:void(0);" class="menubutton" onclick="myFunction()">
     menu
   </a>
