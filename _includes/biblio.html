@@ -7,7 +7,7 @@
 {% endif %}
 
 {% for bib in bibfiles %} 
-<bibtex src="{{site.baseurl}}/{{bib}}"></bibtex>
+<bibtex src="{{bib | relative_url}}"></bibtex>
 {% endfor %}
 
 
@@ -46,7 +46,8 @@
   </div>
 </div>
 
-<!--
+
+{% if include.search %}
 <select class="bibtex_search"
             search="bibtextypekey">
    <option value="">Select type</option>
@@ -64,7 +65,8 @@
   <option value="">All Authors</option>
 </select>
 <input type="text" class="bibtex_search" id="searchbar" placeholder="Search publications">
--->
+{% endif %}
+
 <div id="bibtex_display">
 	<div class="bibtex_template" style="display:none;">
 		<ul reversed>
@@ -101,11 +103,18 @@
 					</span><span class="year"></span>
 				</span>
 				<br>
-				<span class="if url">
-					<a class="url">
-						URL
+				<div class="if url">
+					<a class="bibtexVar" href="+URL+" extra="url">
+						<span class="url"></span>
 					</a>
-				</span>
+				</div>
+				<div class="if !url">
+					<div class="if doi">
+						<a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
+							https://dx.doi.org/<span class="doi"></span>
+						</a>
+					</div>
+				</div>
 				<span class="if arxiv">
 					<a class="arxiv">
 						arXiv
@@ -114,11 +123,6 @@
 				<span class="if pdf">
 					<a class="pdf">
 						PDF 
-					</a>
-				</span>
-				<span class="if doi">
-					<a class="doi">
-						DOI
 					</a>
 				</span>
 				<span class="if code">
