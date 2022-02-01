@@ -8,17 +8,6 @@ body {
 }
 
 
-h2 {
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    background-color: #5bc0de;
-    display: inline-block;
-    padding: 7px;
-}
-
 article { 
  padding: 80px;
  padding-left: 160px;
@@ -115,7 +104,7 @@ div.title {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #9c9c9c;
+  color: #d9dbda;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -155,16 +144,12 @@ div.title {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
 	article {
 		padding: 5px;
 		padding-top: 40px;
 	}	  
-
-	.flex-item {
-		flex: 100%;
-	}
 
         .topnav {
                  padding-left: 0px;
