@@ -2,7 +2,6 @@
 name: Juliet Star
 img: img/juliet.jpeg
 role: full
-layout: default
 ---
 
 

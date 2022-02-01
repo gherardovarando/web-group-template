@@ -72,13 +72,18 @@ collections:
     output: true
   people:
     output: true
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "people"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "new"
 
 ## short name of the group
 short: AwRG
