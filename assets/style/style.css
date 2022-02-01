@@ -8,10 +8,11 @@ body {
 }
 
 
+
 article { 
- padding: 80px;
- padding-left: 160px;
- padding-right: 160px;
+ margin: 80px auto 20px auto;
+ padding: 5px;
+ max-width: 1000px;
  display: block;
  overflow-x: hidden;
  overflow-y: hidden;
@@ -95,6 +96,7 @@ div.title {
         padding-right: 160px;
         padding-left: 160px;
 	width: 100%;
+	max-height: 80px;
 	background-color: #2d2d2d;
 	overflow: hidden;
 }
@@ -144,11 +146,11 @@ div.title {
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
 	article {
 		padding: 5px;
-		padding-top: 60px;
+		padding-top: 10px;
 	}	  
 
         .topnav {
