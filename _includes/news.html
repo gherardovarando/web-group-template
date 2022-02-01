@@ -1,9 +1,10 @@
 <div class = "news"> 
-        {% assign selected = site.news %}
+        {% assign selected = site.news | reverse%}
 	{% for post in selected %}
 	<div class = "news-item">
 		<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 		<div>
+			<p>{{post.date | date_to_string}}</p>
 			{{ post.excerpt }}
 		</div>
 	</div>
