@@ -5,6 +5,6 @@ weight: 4
 hide: false
 ---
 
-## Publications 
+# Publications 
 
 {% include biblio.html %}
