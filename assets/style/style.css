@@ -157,6 +157,8 @@ div.title {
         .topnav {
                  padding-left: 0px;
                  padding-right: 0px;
+	         max-height: 50%;
+		 overflow-y: auto;
         }
 	.topnav a:not(:first-child) {display: none;}
 	.topnav a.menubutton {
