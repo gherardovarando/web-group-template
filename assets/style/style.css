@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: monospace;
   margin: 0;
 }
 
@@ -11,6 +11,7 @@ body {
 
 article { 
  margin: 80px auto 20px 160px;
+ font-size: 12pt;
  padding: 5px;
  max-width: 1000px;
  display: block;
@@ -154,7 +155,6 @@ div.bibtexout {
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
-    font-size: 15px;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
