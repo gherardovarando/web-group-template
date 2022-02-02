@@ -1,8 +1,6 @@
 <figure>
-	<a href="{{ include.url }}">
-		<img src="{{ include.file | relative_url }}" 
-		     style="max-width: {{ include.max-width | default: '100%' }}; width: {{ include.width | default: 100px }};"
-		     alt="{{ include.alt }}"/>
-	</a>
+	<img src="{{ include.file | relative_url }}" 
+	     style="max-width: {{ include.max-width | default: '100%' }}; width: {{ include.width | default: 100px }};"
+	     alt="{{ include.alt }}"/>
 	<figcaption>{{ include.caption }}</figcaption>
 </figure>
