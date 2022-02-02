@@ -102,48 +102,47 @@
 						<span class="edition"></span> ed.,
 					</span><span class="year"></span>
 				</span>
-				<br>
-				<div class="if url">
-					<a class="bibtexVar" href="+URL+" extra="url">
-						url
-					</a>
-				</div>
-				<div class="if !url">
-					<div class="if doi">
-						<a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
-							doi
-						</a>
-					</div>
-				</div>
-				<span class="if arxiv">
-					<a class="arxiv">
-						arXiv
+				<span class="if url">
+					| <a class="bibtexVar" href="+URL+" extra="url">
+						<span class='url'>"+URL+"</span>
 					</a>
 				</span>
+				<span class="if doi">
+				        | <a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
+						<span class='doi'></span>
+					</a>
+				</span>
+				<span class="if eprint">
+					| <span class="if eprinttype==arXiv || archivePrefix==arXiv">
+						<a class="bibtexVar" href="https://arxiv.org/abs/+EPRINT+" extra="eprint">
+							arXiv:<span class='eprint'></span>
+						</a>
+					</span>
+				</span>
 				<span class="if pdf">
-					<a class="pdf">
+					| <a class="pdf">
 						pdf 
 					</a>
 				</span>
-				<span class="if code">
-					<button type="button" class="btn btn-sm btn-danger">
-						<a class="code"> Code </a>
-					</button>
-				</span>
-				<span class="if project">
-					<button type="button" class="btn btn-sm btn-warning">
-						<a class="code"> Project </a>
-					</button>
-				</span>
-				<span class="if bibtex">
-					<button type="button">bibtex</button>
-				</span>
-				<br>
-				<span>
-					<div class="bibtexdata alert alert-success collapse closed" role="alert">
-						<span class="bibtex"></span>
+				<div>
+					<button class = "bibtexVar" extra = "bibtexkey" 
+						bibtexjs-css-escape 
+						onclick="toggle(this)">bibtex</button>
+					<div class="bibtexout closed">
+						<span class="bibtexraw"> </span>
 					</div>
-				</span>
+				</div>
 			</li>
 		</ul>
 </div>
+
+	<script>
+		function toggle(obj){
+			obj2 = obj.nextElementSibling
+			if(obj2.classList.contains("closed")){
+				obj2.classList.remove("closed")
+			}else{
+				obj2.classList.add("closed")
+			}
+		}
+	</script>
