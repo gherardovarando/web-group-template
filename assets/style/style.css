@@ -151,7 +151,7 @@ div.title {
 div.bibtexout {
    background: #f4f4f4;
     border: 1px solid #ddd;
-    border-left: 3px solid;
+    border-left: 3px solid #268BD2;
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
