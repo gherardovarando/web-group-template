@@ -1,8 +1,8 @@
 ---
 layout: default
-title: An amazing workshop
+title: An amazing workshop 1 
 location: virtual
-date: 2020-07-24 14:00 +03:00
+date: 2023-07-24 14:00 +03:00
 location: virtual 
 link: https://www.youtube.com/
 published: true
